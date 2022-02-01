@@ -1,0 +1,48 @@
+Title: 
+Football Fanatic
+Dylan Blaine
+
+Problem Description: 
+
+For this project I will have a user bet on a virtual football game. The user will bet on the winner of the game, and then the outcome of the game will be randomly generated. 
+The user’s bet and resulting balance will be output to a text file to keep track of betting history. When the user decides to stop, the users final balance will be output to them. 
+
+Program Documentation: 
+
+The user will first enter their balance and how much they would like to bet on the game. These must be positive integers. 
+If the balance is negative, it is set to the default of 100$, and if the bet is negative, then it is changed to positive. The user then enters the team number of who they believe will win.
+Then the user enters the team number of who they believe will lose. Both of the team numbers must be 1-10 and if user enters a number out of this range, they are notified and reprompted
+to enter a number within the range. The game is then played using randomly generated scores 0-100 and the user's resulting balance is displayed to the user. The user is then prompted to bet
+on a new game, if the user wishes to discontinue, they can enter -1. Some features that could be added to this program are having different strengths for each team then having the odds
+changed based on these strengths so that if a user bets on a lower strength team, and they win then they would win more money than usual. This could be implemented by creating a second
+vector with team strengths, then using different ranges of scores for different teams. The stronger teams would have lower floor and higher ceiling ranges to compensate for this. The amount the 
+player wins would also have to be multiplied by a factor based on the strength of the team they are betting on.
+
+Tests: 
+
+Test case 1: team numbers: 1,2, balance = 100, and bet = 5.
+These are all valid inputs and the program runs correctly with an ouptut balance of either 95 or 105 based on outcome of the game.
+
+Test case 2: Team numbers outside of 1-10 range.
+The user is continually prompted to reenter a team number until the number is within the valid range.
+
+Test Case 3: User enters a negative balance.
+The balance is set to default of $100 and program executes properly.
+
+Test Case 4: User enters a negative bet amount not equal to -1.
+The bet is changed to positive and the program executes properly.
+
+Test Case 5: User enters -1 into bet amount.
+The program executes properly and discontinues playing and outputs the players final balance.
+
+
+Reflections:
+
+This program helped a lot in bringing the many concepts we have learned together. I learned a lot about debugging my program. For example I initially had problems outputting the team
+scores. I fixed this by commenting out sections of by code to specifically target my setScore functions. From doing this I realized that I was creating random numbers using the same
+seed so they would always be the same. I decided to make a vector to store a couple random numbers then selected one from this list so that the second random number was different. I also
+learned that creating a new class object within fucntions caused my functions to fail. So I edited them to just call other class functions without an object which made them run smoothly.
+I learned that creating your own project allows for more freedom which has both is advantages and disadvantages. I found that when I encountered a problem I was able to fix it whichever
+way I wanted instead of having to adhere to a certain format. Not having to adhere to a certain format however had some disadvantages, because sometimes the presented assignments we
+were given gave us a specific format to follow that was known to work properly so it helped guide our coding. This project was overall a positive experience and helped enhance my
+coding skills and intuition.
